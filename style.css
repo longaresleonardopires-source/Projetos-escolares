@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("fundo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card{
+    width: 450px;
+    height: 600px;
+    perspective: 900px;
+}
+
+.card-inner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 2.0s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner{
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 2px solid #2b2828;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.card-front{
+    background: rgba(129, 140, 160, 0.808);
+    text-align: center;
+}
+
+.capa{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.perfil{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: -40px;
+    border: 3px solid rgb(2, 2, 2);
+}
+
+.card-front h2{
+    margin-top: 25px;
+}
+
+.card-front p{
+    text-align: center;
+}
+
+.card-back{
+    background: #0d0c0f;
+    color: rgba(255, 255, 255, 0.979);
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
